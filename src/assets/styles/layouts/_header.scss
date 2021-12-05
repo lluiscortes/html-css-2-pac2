@@ -3,8 +3,8 @@
 //--------------//
 .header {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 30px;
+  right: 30px;
   z-index: 999;
 
   @include media-breakpoint-up(md) {
@@ -28,19 +28,19 @@
 }
 .toggle__bar {
   height: 3px;
-  width: 50px;
-  margin: 8px 0;
+  width: 40px;
+  margin: 6px 0;
   background-color: $body-color;
   transition: $transition-base;
 }
 .toggle--close {
 
   .toggle__bar:nth-child(1) {
-    transform: rotate(45deg) translate(13px, 13px);
+    transform: rotate(45deg) translate(11px, 11px);
   }
 
   .toggle__bar:nth-child(3) {
-    transform: rotate(-45deg) translate(13px, -13px)
+    transform: rotate(-45deg) translate(10px, -10px)
   }
 
   .toggle__bar:nth-child(2) {
@@ -115,7 +115,13 @@
   align-items: center;
 }
 .header__logo {
-  width: 80px;
+  width: 70px;
   height: auto;
   margin-right: 1.5rem;
+  border: 3px solid $primary;
+
+  @include media-breakpoint-up(md) {
+    width: 80px;
+    margin-right: 2rem;
+  }
 }

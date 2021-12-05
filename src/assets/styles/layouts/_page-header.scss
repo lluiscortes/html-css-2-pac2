@@ -7,7 +7,7 @@
 }
 .page-header__rectangle {
   display: block;
-  height: 350px;
+  height: 370px;
   width: 30%;
   position: absolute;
   top: 0;
@@ -22,7 +22,7 @@
 .page-title {
   font-size: 4rem;
   margin-bottom: 8rem;
-  padding-top: 9rem;
+  padding-top: 10rem;
   max-width: 600px;
 
   @include media-breakpoint-up(md) {
