@@ -1,3 +1,10 @@
 //---------------//
 //--- Gallery ---//
 //---------------//
+.gallery-item img {
+  transition: opacity .2s ease-in-out;
+
+  &:hover {
+    opacity: .6;
+  }
+}

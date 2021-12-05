@@ -22,7 +22,8 @@
 @import 'plugins/simplelightbox';
 @import 'node_modules/simplelightbox/src/simple-lightbox';
 
-// Fonts
+// AOS
+@import 'node_modules/aos/src/sass/aos';
 
 
 /**
@@ -36,6 +37,7 @@
 @import 'layouts/page-header';
 @import 'layouts/footer';
 @import 'layouts/gallery';
+@import 'layouts/header';
 
 
 /**

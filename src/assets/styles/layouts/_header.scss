@@ -1,0 +1,121 @@
+//--------------//
+//--- Header ---//
+//--------------//
+.header {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+
+  @include media-breakpoint-up(md) {
+    top: 50px;
+    right: 50px;
+  }
+}
+
+//--------------//
+//--- Toggle ---//
+//--------------//
+.toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: $transition-base;
+}
+.toggle__bar {
+  height: 3px;
+  width: 50px;
+  margin: 8px 0;
+  background-color: $body-color;
+  transition: $transition-base;
+}
+.toggle--close {
+
+  .toggle__bar:nth-child(1) {
+    transform: rotate(45deg) translate(13px, 13px);
+  }
+
+  .toggle__bar:nth-child(3) {
+    transform: rotate(-45deg) translate(13px, -13px)
+  }
+
+  .toggle__bar:nth-child(2) {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+}
+
+
+//--------------//
+//--- Navbar ---//
+//--------------//
+.navbar {
+  background-color: $primary;
+  position: fixed;
+  height: 100vh;
+  width: 75%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: $transition-base;
+  transform: translateX(-100%);
+  padding: 1rem;
+
+  &--show {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @include media-breakpoint-up(md) {
+    width: 33.33%;
+  }
+}
+.navbar__menu {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+.navbar__item {
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.navbar__link {
+  color: $white;
+  font-family: $headings-font-family;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-weight: $font-weight-bold;
+  font-size: 1.5rem;
+}
+
+
+//-------------//
+//--- Brand ---//
+//-------------//
+.header__brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  width: 80px;
+  height: auto;
+  margin-right: 1.5rem;
+}

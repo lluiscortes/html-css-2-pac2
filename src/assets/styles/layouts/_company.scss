@@ -29,10 +29,9 @@
 //-------------//
 .actor {
   background-color: $dark;
-  border-radius: $border-radius;
   box-shadow: 3px 0 40px rgba(0,0,0, 1);
   height: 100%;
-  border: 1px solid $dark;
+  border: 2px solid $dark;
   display: flex;
   flex-direction: column;
 }
@@ -40,8 +39,7 @@
   position: relative;
 }
 .actor__image {
-  border-top-right-radius: $border-radius;
-  border-top-left-radius: $border-radius;
+
 }
 .actor__body {
   padding: 2rem 2.25rem 1.5rem 2rem;
