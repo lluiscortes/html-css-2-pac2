@@ -18,11 +18,12 @@
 // Bootstrap
 @import 'node_modules/bootstrap/scss/bootstrap';
 
+// Simple Lightbox
+@import 'plugins/simplelightbox';
+@import 'node_modules/simplelightbox/src/simple-lightbox';
+
 // Fonts
-@font-face {
-  font-family: "Chinese Takeway";
-  src: url('../fonts/Chinese-Takeaway.ttf.woff') format('woff');
-}
+
 
 /**
  * Import layouts
@@ -34,6 +35,8 @@
 @import 'layouts/company';
 @import 'layouts/page-header';
 @import 'layouts/footer';
+@import 'layouts/gallery';
+
 
 /**
  * Do NOT include anything else in this file!

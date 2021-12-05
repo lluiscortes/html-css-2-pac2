@@ -2,8 +2,7 @@
 //--- Site Footer ---//
 //-------------------//
 .footer {
-  padding: $wrapper 0;
-  background-color: $black;
+  background-color: $dark;
 }
 
 
@@ -11,6 +10,7 @@
 //--- Footer Navbar ---//
 //---------------------//
 .footer__navbar {
+  padding: $wrapper 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,7 +46,7 @@
 }
 .footer__menu ul li {
   list-style-type: none;
-  margin-bottom: 1rem;
+  margin-bottom: 1.75rem;
 
   &:last-child {
     margin-bottom: 0;
@@ -63,11 +63,18 @@
 }
 .footer__menu ul li a {
   color: $gray-600;
-  font-size: 1.25rem;
+  font-size: $font-size-lg;
   transition: $transition-base;
+  font-family: $headings-font-family;
 
   &:hover {
     color: $white;
+  }
+
+  &.active {
+    color: $white;
+    border-bottom: 2px solid $primary;
+    padding-bottom: .75rem;
   }
 }
 
@@ -76,7 +83,7 @@
 //--- Footer Logo ---//
 //-------------------//
 .footer__logo {
-  width: 110px;
+  width: 100px;
   height: auto;
   margin-bottom: 4rem;
 
@@ -101,4 +108,15 @@
     margin-top: 0;
     margin-left: 0;
   }
+}
+
+
+//----------------------//
+//--- Footer Credits ---//
+//----------------------//
+.footer__credits {
+  text-align: center;
+  padding: $wrapper-sm 0;
+  border-top: 1px solid $gray-900;
+  color: $gray-600;
 }

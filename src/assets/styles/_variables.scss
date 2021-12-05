@@ -24,18 +24,21 @@ $body-color: $white;
 
 // Wrapper
 $wrapper: 5rem;
+$wrapper-sm: $wrapper * .5;
 
 // Border radius
 $border-radius: .4rem;
 
 // Typo
 $font-family-serif: 'Playfair Display', serif;
-$font-family-base: $font-family-serif;
+$font-family-sans-serif: 'Raleway', sans-serif;
+$font-family-base: $font-family-sans-serif;
 $font-size-base: 1.1rem;
 $font-size-sm: $font-size-base * .9;
 $font-size-lg: $font-size-base * 1.1;
 $font-weight-base: 400;
 $font-weight-bold: 700;
+$line-height-base: 1.6;
 
 // Links
 $link-decoration: none;
@@ -43,6 +46,7 @@ $link-decoration: none;
 // Headings
 $headings-margin-bottom: 1.5rem;
 $headings-font-weight: $font-weight-bold;
+$headings-font-family: $font-family-serif;
 
 // Box Shadow
 $box-shadow: 0 .5rem 1rem rgba($black, .15);
