@@ -3,43 +3,102 @@
 //-------------------//
 .footer {
   padding: $wrapper 0;
-  background-color: $dark;
+  background-color: $black;
 }
-.footer__nav {
+
+
+//---------------------//
+//--- Footer Navbar ---//
+//---------------------//
+.footer__navbar {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
 
   @include media-breakpoint-up(md) {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
   }
 }
-.footer__nav ul {
+
+
+//-------------------//
+//--- Footer Menu ---//
+//-------------------//
+.footer__menu {
+  margin-bottom: 4rem;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 0;
+  }
+}
+.footer__menu ul {
   display: flex;
   flex-direction: column;
   padding: 0;
   margin: 0;
   text-align: center;
-}
-.footer__nav ul li {
-  list-style-type: none;
 
-  &:not(:last-child) {
-    margin-bottom: 1rem;
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
   }
 }
-.footer__nav ul a {
+.footer__menu ul li {
+  list-style-type: none;
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 0;
+    margin-right: 3rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.footer__menu ul li a {
   color: $gray-600;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   transition: $transition-base;
 
   &:hover {
     color: $white;
   }
 }
+
+
+//-------------------//
+//--- Footer Logo ---//
+//-------------------//
 .footer__logo {
-  width: 120px;
+  width: 110px;
   height: auto;
-  margin: 0 auto 4rem;
+  margin-bottom: 4rem;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 0;
+  }
+}
+
+
+//---------------------//
+//--- Footer Social ---//
+//---------------------//
+.footer__social {
+  @extend .social-icons;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 4rem;
+    margin-left: auto;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 0;
+    margin-left: 0;
+  }
 }
