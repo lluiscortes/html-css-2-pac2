@@ -1,0 +1,93 @@
+//--------------------//
+//--- Company Grid ---//
+//--------------------//
+.company-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -25px;
+}
+.company-grid__item {
+  padding: 0 25px;
+  margin-bottom: 50px;
+
+  @include media-breakpoint-up(md) {
+    width: 50%;
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: 33%;
+  }
+}
+
+
+//-------------//
+//--- Actor ---//
+//-------------//
+.actor {
+  background-color: $dark;
+  border-radius: $border-radius;
+  box-shadow: 3px 0 40px rgba(0,0,0, 1);
+  height: 100%;
+  border: 1px solid $dark;
+  display: flex;
+  flex-direction: column;
+}
+.actor__header {
+  position: relative;
+}
+.actor__image {
+  border-top-right-radius: $border-radius;
+  border-top-left-radius: $border-radius;
+}
+.actor__body {
+  padding: 2rem 2.25rem 1.5rem 2rem;
+  text-align: center;
+}
+.actor__character {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+.actor__name {
+  font-size: $font-size-lg;
+  font-style: italic;
+  font-weight: $font-weight-base;
+}
+.actor__description {
+  margin-bottom: 0;
+  font-size: $font-size-sm;
+}
+.actor__footer {
+  padding: .5rem 2rem 2rem 2rem;
+  margin-top: auto;
+}
+.actor__social {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+
+  li:not(:last-child) {
+    margin: 0 1rem 0 0;
+  }
+
+  li a {
+    font-size: $font-size-sm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $gray-600;
+    color: $gray-600;
+    border-radius: 100%;
+    transition: $transition-base;
+
+    &:hover {
+      color: $white;
+      border-color: $primary;
+      background-color: $primary;
+    }
+  }
+}

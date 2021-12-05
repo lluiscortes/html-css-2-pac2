@@ -1,50 +1,144 @@
-* {
+// Settings
+//@font-face {
+//  font-family: 'Galatia SIL';
+//  src: url('https://www.chenhuijing.com/demos/grids-tycho/fonts/galsilb.eot');
+//  src: url('https://www.chenhuijing.com/demos/grids-tycho/fonts/galsilb.eot?#iefix') format('embedded-opentype'),
+//  url('https://www.chenhuijing.com/demos/grids-tycho/fonts/galsilb.woff2') format('woff2'),
+//  url('https://www.chenhuijing.com/demos/grids-tycho/fonts/galsilb.woff') format('woff');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+
+//$header-font: 'Galatia SIL', Georgia, serif;
+//$body-font: 'Avenir Book', 'Franklin Gothic Medium', Helvetica, Arial, sans-serif;
+
+
+// General styles
+html {
   box-sizing: border-box;
+  height: 100%;
 }
 
-body {
-  display: flex;
-  height: 100vh;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
   margin: 0;
-  padding: 2rem;
-  font-family: $font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
+  padding: 0;
 }
 
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+// Basic styles and layout
+main {
+  //max-width: 45em;
+  //margin: 0 auto;
+  //position: relative;
+  //padding: 1em;
 }
 
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
 
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
-  }
+h1 {
+
 }
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
 
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
+.about {
+  line-height: 1.3;
+  margin-bottom: 1em;
+}
+
+a {
+  //display: block;
+  //text-transform: uppercase;
+  //text-decoration: none;
+  //font-weight: bold;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.location {
+  text-transform: uppercase;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+button {
+  border: 0;
+  text-transform: uppercase;
+  font-size: 100%;
+  padding: 1em 2em;
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+}
+
+// Grid layout for wide display
+@supports (display: grid) {
+
+  @media (min-width: 42em) and (min-height: 27em) {
+
+    main {
+      //max-width: none;
+      //padding: 0;
+      //display: grid;
+      //grid-template-columns: minmax(10em, max-content) minmax(14em, max-content) minmax(1em, 1fr) fit-content(28em) calc(2em + 0.5vw);
+      //grid-template-rows: 35vh 40vh 15vh 10vh;
+    }
+
+    h1 {
+      grid-column: 3/4;
+      grid-row: 1/2;
+    }
+
+    .about {
+      grid-column: 5/5;
+      grid-row: 2;
+      align-self: end;
+      padding-bottom: 4vh;
+      margin-bottom: initial;
+    }
+
+    a {
+      grid-column: 5/5;
+      justify-self: end;
+      align-self: center;
+      margin-bottom: initial;
+
+      &::before {
+        //content: '';
+        //display: block;
+        //height: 4px;
+        //width: 4ch;
+        //margin-bottom: 1em;
+      }
+    }
+
+    img {
+      grid-column: 1/2;
+      grid-row: 1/5;
+    }
+
+    .location {
+      grid-column: 3/4;
+      grid-row: 3/4;
+      z-index: 2;
+      text-align: center;
+      display: flex;
+
+      p {
+        margin: auto;
+      }
+    }
+
+    button {
+      grid-column: 2/3;
+      grid-row: 4/5;
+      position: initial;
+      padding: 0;
+    }
   }
 }

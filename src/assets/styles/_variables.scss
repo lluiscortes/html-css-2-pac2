@@ -1,12 +1,58 @@
 @use "sass:color";
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
-$font-family-serif: "Georgia", "Times New Roman", serif;
+// Colors
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #111;
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+$primary: #1600ff;
+$secondary: $gray-600;
+$light: $gray-100;
+$dark: #16191c;
 
-$mqMinWidth: 420px;
+// Gradient
+$gradient: linear-gradient(135deg, #0600bc 0%,#1600ff 100%);
+
+// Body
+$body-bg: $black;
+$body-color: $white;
+
+// Wrapper
+$wrapper: 5rem;
+
+// Border radius
+$border-radius: .4rem;
+
+// Typo
+$font-family-serif: 'Playfair Display', serif;
+$font-family-base: $font-family-serif;
+$font-size-base: 1.1rem;
+$font-size-sm: $font-size-base * .9;
+$font-size-lg: $font-size-base * 1.1;
+$font-weight-base: 400;
+$font-weight-bold: 700;
+
+// Links
+$link-decoration: none;
+
+// Headings
+$headings-margin-bottom: 1.5rem;
+$headings-font-weight: $font-weight-bold;
+
+// Box Shadow
+$box-shadow: 0 .5rem 1rem rgba($black, .15);
+$box-shadow-sm: 0 .125rem .25rem rgba($black, .075);
+$box-shadow-lg: 0 1rem 3rem rgba($black, .175);
+
+// Card
+$card-bg: $dark;
+$card-border-width: 0;
+$card-color: $light;

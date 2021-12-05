@@ -1,0 +1,45 @@
+//-------------------//
+//--- Site Footer ---//
+//-------------------//
+.footer {
+  padding: $wrapper 0;
+  background-color: $dark;
+}
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.footer__nav ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.footer__nav ul li {
+  list-style-type: none;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+.footer__nav ul a {
+  color: $gray-600;
+  font-size: 1.5rem;
+  transition: $transition-base;
+
+  &:hover {
+    color: $white;
+  }
+}
+.footer__logo {
+  width: 120px;
+  height: auto;
+  margin: 0 auto 4rem;
+}

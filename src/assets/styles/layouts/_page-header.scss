@@ -1,0 +1,37 @@
+//-------------------//
+//--- Page Header ---//
+//-------------------//
+.page-header {
+  padding: $wrapper 0;
+  position: relative;
+}
+.page-header__rectangle {
+  display: block;
+  height: 300px;
+  width: 30%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $primary;
+  background: $gradient;
+  z-index: -1;
+
+  @include media-breakpoint-up(md) {
+    height: 350px;
+  }
+}
+.page-title {
+  font-size: 4rem;
+  margin-bottom: 7rem;
+  max-width: 600px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 6rem;
+    margin-left: 10%;
+  }
+}
+.page-description {
+  max-width: 800px;
+  margin-bottom: 5rem;
+  font-size: $font-size-lg;
+}

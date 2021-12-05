@@ -43,5 +43,9 @@
     "rimraf": "^3.0.2",
     "sharp": "^0.29.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@popperjs/core": "^2.11.0",
+    "bootstrap": "^5.1.3"
+  }
 }

@@ -15,15 +15,25 @@
  * see commented examples below
  */
 
-// @import "some-node-module";
-// @import "@some-company/some-node-module";
+// Bootstrap
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+// Fonts
+@font-face {
+  font-family: "Chinese Takeway";
+  src: url('../fonts/Chinese-Takeaway.ttf.woff') format('woff');
+}
 
 /**
  * Import layouts
  * It's a best practice to use a different partial for each page
  */
 
-@import "layouts/home";
+@import 'layouts/general';
+@import 'layouts/home';
+@import 'layouts/company';
+@import 'layouts/page-header';
+@import 'layouts/footer';
 
 /**
  * Do NOT include anything else in this file!
