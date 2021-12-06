@@ -21,6 +21,8 @@ import Masonry from 'masonry-layout';
 // AOS
 import AOS from 'aos';
 
+// Headroom
+import { headroom } from 'headroom';
 
 
 /**
@@ -43,8 +45,8 @@ imagesLoaded(gallery,function(){
 // AOS
 AOS.init({
   duration: 1000,
+  offset: 0,
 });
-
 
 // Header behavior
 const toggle = document.getElementById('toggle');
@@ -69,3 +71,7 @@ toggle.addEventListener('click', toggleMenu);
 for (var i = 0, len = navLinks.length; i < len; i++) {
   navLinks[i].addEventListener('click', closeMenu);
 }
+
+// Headroom
+var header = document.getElementById('header');
+headroom(header);

@@ -1,0 +1,161 @@
+//--------------------//
+//--- Blog Article ---//
+//--------------------//
+.blog-header {
+
+}
+.blog-header__thumb {
+  padding: 16rem 0;
+  background-image: url('../images/theatre-5.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+.blog-header__content {
+  width: 90%;
+  margin-top: -200px;
+  margin-right: auto;
+  margin-left: auto;
+  background: $body-bg;
+  padding: 2rem;
+  max-width: 720px;
+
+  @include media-breakpoint-up(md) {
+    padding: 3rem 5rem;
+  }
+}
+.blog-header__title {
+  color: $white;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+
+  @include media-breakpoint-up(md) {
+    font-size: 4rem;
+  }
+}
+.blog-header__author {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+
+  .avatar {
+    width: 70px;
+    height: 70px;
+    margin-right: 1.5rem;
+  }
+
+  .name {
+    margin: 0;
+    color: $gray-600;
+    font-size: 1.5rem;
+    font-family: $font-family-base;
+    font-weight: $font-weight-base;
+  }
+}
+
+
+//------------------//
+//--- Blog Intro ---//
+//------------------//
+.blog-intro {
+  max-width: 720px;
+  position: relative;
+  padding: 1rem 0 0 1.75rem;
+
+  @include media-breakpoint-up(md) {
+    margin-left: 6rem;
+    padding: 1.25rem 0 0 2rem;
+  }
+}
+.blog-intro p {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-family: $headings-font-family;
+}
+.blog-intro__rectangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $primary;
+  width: 100px;
+  height: 100px;
+  z-index: -1;
+}
+
+
+//--------------------//
+//--- Blog Content ---//
+//--------------------//
+.blog-content {
+  padding: $wrapper 0;
+}
+
+
+//------------------//
+//--- Blockquote ---//
+//------------------//
+blockquote {
+  font-family: $headings-font-family;
+  font-size: 1.5rem;
+  padding: 0 1.75rem;
+  border-left: 3px solid $primary;
+  border-right: 3px solid $primary;
+  max-width: 420px;
+  float: left;
+  margin: 3rem 0 4rem;
+
+  @include media-breakpoint-up(md) {
+    margin: 3rem 3rem 4rem;
+  }
+}
+
+
+//-----------------------//
+//--- Sharing Buttons ---//
+//-----------------------//
+.sharing-buttons {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  li {
+    flex-basis: 0;
+    flex-grow: 1;
+    list-style-type: none;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  a {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    font-size: 18px;
+    color: $white;
+    transition: $transition-base;
+    background: $gray-900;
+
+    &:hover {
+      background: $primary;
+      transform: translateY(-5px);
+    }
+  }
+}
+
+
+//---------------//
+//--- Figures ---//
+//---------------//
+figure {
+  max-width: 720px;
+  margin: 4rem auto;
+
+  figcaption {
+    color: $gray-600;
+    margin: 1rem auto 0;
+    text-align: center;
+  }
+}

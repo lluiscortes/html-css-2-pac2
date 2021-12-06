@@ -18,6 +18,14 @@ $secondary: $gray-600;
 $light: $gray-100;
 $dark: #16191c;
 
+// Social Media Colors
+$twitter-blue: #1da1f2;
+$facebook-blue: #4267b2;
+$linkedin-blue: #0073b1;
+$whatsapp-green: #25D366;
+$youtube-red: #f00;
+$instagram-fucsia: #ed3185;
+
 // Body
 $body-bg: $black;
 $body-color: $white;
@@ -57,3 +65,8 @@ $box-shadow-lg: 0 1rem 3rem rgba($black, .175);
 $card-bg: $dark;
 $card-border-width: 0;
 $card-color: $light;
+
+// Buttons
+$btn-border-radius: 0;
+$input-btn-padding-x: 2rem;
+$input-btn-padding-y: 1rem;

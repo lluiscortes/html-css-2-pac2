@@ -1,33 +1,88 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
 
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <title>The Orphan of Zhao</title>
+</head>
 
 
-    <title>The Orphan of Zhao</title>
-  </head>
   <body>
 
-    <main>
-      <h1>The Orphan of Zhao</h1>
-
-      <p class="about">Tycho is an American ambient music project led by Scott Hansen as primary composer, songwriter and producer. Hailing from San Francisco, California, he is known as ISO50 for his photographic and design works. His music is a combination of downtempo
-        vintage-style synthesizers and ambient melodies.</p>
-      <a href="javascript:void(0)">Read more</a>
-
-      <img src="./assets/images/home.jpg" alt="The Orphan of Zhao">
-
-      <div class="location">
-        <p>10.2.2010 Toronto<br>The Drake Hotel</p>
+  <!-------------------->
+  <!-- Header : START -->
+  <!-------------------->
+  <header id="header" class="header">
+    <div class="header__brand" data-aos="slide-down">
+      <a href="index.html">
+        <img class="header__logo" src="./assets/images/logo.png" alt="Logo - The Orphan of Zhao">
+      </a>
+      <div id="toggle" class="toggle">
+        <div class="toggle__bar"></div>
+        <div class="toggle__bar"></div>
+        <div class="toggle__bar"></div>
       </div>
-      <a type="button" href="company.html">La companyia</a>
-    </main>
+    </div>
+    <nav id="navbar" class="navbar">
+      <ul class="navbar__menu">
+        <li class="navbar__item"><a class="navbar__link" href="index.html">Home</a></li>
+        <li class="navbar__item"><a class="navbar__link" href="company.html">Actors & Characters</a></li>
+        <li class="navbar__item"><a class="navbar__link" href="blog.html">Blog</a></li>
+        <li class="navbar__item"><a class="navbar__link" href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!------------------>
+  <!-- Header : END -->
+  <!------------------>
+
+  <main class="home">
+    <h1 class="home__title" data-aos="slide-down">The Orphan of Zhao</h1>
+    <p class="home__intro" data-aos="slide-down">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam faucibus ipsum ac metus
+      semper commodo. Phasellus sapien diam, lacinia at bibendum at, imperdiet in est.</p>
+    <a class="home__company-btn btn btn-primary" href="company.html">Know the company</a>
+    <img class="home__img" src="./assets/images/theatre-9.jpg" alt="The Orphan of Zhao" data-aos="fade-in">
+    <a class="home__blog-btn" type="button" href="blog.html">Latest Article</a>
+    <a class="home__gallery-btn" type="button" href="gallery.html">The Show Gallery</a>
+  </main>
+
+    <!-------------------->
+    <!-- Footer : START -->
+    <!-------------------->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__navbar">
+          <img class="footer__logo" src="./assets/images/logo.png" alt="Logo - The Orphan of Zhao">
+          <nav class="footer__menu">
+            <ul>
+              <li><a class="active" href="index.html">Home</a></li>
+              <li><a href="company.html">Actors & Characters</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+          </nav>
+          <ul class="footer__social">
+            <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+          </ul>
+        </div>
+        <div class="footer__credits">
+          ©2021 Lluís Cortès Frau
+        </div>
+      </div>
+    </footer>
+    <!------------------>
+    <!-- Footer : END -->
+    <!------------------>
+
 
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>

@@ -1,144 +1,113 @@
-// Settings
-//@font-face {
-//  font-family: 'Galatia SIL';
-//  src: url('https://www.chenhuijing.com/demos/grids-tycho/fonts/galsilb.eot');
-//  src: url('https://www.chenhuijing.com/demos/grids-tycho/fonts/galsilb.eot?#iefix') format('embedded-opentype'),
-//  url('https://www.chenhuijing.com/demos/grids-tycho/fonts/galsilb.woff2') format('woff2'),
-//  url('https://www.chenhuijing.com/demos/grids-tycho/fonts/galsilb.woff') format('woff');
-//  font-weight: normal;
-//  font-style: normal;
-//}
+//-----------------//
+//--- Home Page ---//
+//-----------------//
+main.home {
+  max-width: 45em;
+  margin: 0 auto;
+  position: relative;
+  padding: 1em;
 
-//$header-font: 'Galatia SIL', Georgia, serif;
-//$body-font: 'Avenir Book', 'Franklin Gothic Medium', Helvetica, Arial, sans-serif;
+  .home__title {
+    color: $primary;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    padding-top: 4rem;
+  }
 
+  .home__intro {
+    margin-bottom: 1rem;
+  }
 
-// General styles
-html {
-  box-sizing: border-box;
-  height: 100%;
-}
+  .home__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
+  .home__company-btn {
+    width: 100%;
+    display: block;
 
-
-// Basic styles and layout
-main {
-  //max-width: 45em;
-  //margin: 0 auto;
-  //position: relative;
-  //padding: 1em;
-}
-
-
-h1 {
-
-}
-
-
-.about {
-  line-height: 1.3;
-  margin-bottom: 1em;
-}
-
-a {
-  //display: block;
-  //text-transform: uppercase;
-  //text-decoration: none;
-  //font-weight: bold;
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.location {
-  text-transform: uppercase;
-  line-height: 1.5;
-  font-weight: bold;
-}
-
-button {
-  border: 0;
-  text-transform: uppercase;
-  font-size: 100%;
-  padding: 1em 2em;
-  position: absolute;
-  right: 1em;
-  bottom: 1em;
-}
-
-// Grid layout for wide display
-@supports (display: grid) {
-
-  @media (min-width: 42em) and (min-height: 27em) {
-
-    main {
-      //max-width: none;
-      //padding: 0;
-      //display: grid;
-      //grid-template-columns: minmax(10em, max-content) minmax(14em, max-content) minmax(1em, 1fr) fit-content(28em) calc(2em + 0.5vw);
-      //grid-template-rows: 35vh 40vh 15vh 10vh;
+    &:hover {
+      background: darken($primary, 20%);
+      border-color: darken($primary, 20%);
     }
+  }
 
-    h1 {
-      grid-column: 3/4;
-      grid-row: 1/2;
+  .home__gallery-btn,
+  .home__blog-btn {
+    border: 0;
+    background-color: $primary;
+    color: $white;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background: darken($primary, 20%);
     }
+  }
+}
 
-    .about {
-      grid-column: 5/5;
-      grid-row: 2;
-      align-self: end;
-      padding-bottom: 4vh;
-      margin-bottom: initial;
-    }
 
-    a {
-      grid-column: 5/5;
-      justify-self: end;
-      align-self: center;
-      margin-bottom: initial;
+@supports (display:grid) {
 
-      &::before {
-        //content: '';
-        //display: block;
-        //height: 4px;
-        //width: 4ch;
-        //margin-bottom: 1em;
-      }
-    }
+  @include media-breakpoint-up(md) {
 
-    img {
-      grid-column: 1/2;
-      grid-row: 1/5;
-    }
-
-    .location {
-      grid-column: 3/4;
-      grid-row: 3/4;
-      z-index: 2;
-      text-align: center;
-      display: flex;
-
-      p {
-        margin: auto;
-      }
-    }
-
-    button {
-      grid-column: 2/3;
-      grid-row: 4/5;
-      position: initial;
+    main.home {
+      max-width: none;
       padding: 0;
+      display: grid;
+      grid-template-columns: 1fr minmax(14em, max-content) minmax(14em, max-content) minmax(1em, 1fr) fit-content(28em) calc(2em + 0.5vw);
+      grid-template-rows: 35vh 35vh 15vh 15vh;
+
+      .home__title {
+        grid-column: 3/6;
+        grid-row: 1/2;
+        z-index: 2;
+        padding-top: 6rem;
+        padding-left: 3rem;
+        padding-right: 5rem;
+        margin-bottom: initial;
+        font-size: 10rem;
+      }
+
+      .home__intro {
+        grid-column: 5/6;
+        grid-row: 2;
+        align-self: end;
+        padding-bottom: 1rem;
+        margin-bottom: initial;
+      }
+
+      .home__company-btn {
+        grid-column: 5/6;
+        justify-self: end;
+        align-self: center;
+        margin-bottom: initial;
+      }
+
+      .home__img {
+        grid-column: 1/4;
+        grid-row: 1/4;
+      }
+
+      .home__blog-btn {
+        grid-column: 3/4;
+        grid-row: 3/4;
+        z-index: 2;
+        position: initial;
+        padding: 0;
+      }
+
+      .home__gallery-btn {
+        grid-column: 2/3;
+        grid-row: 4/5;
+        position: initial;
+        padding: 0;
+      }
     }
   }
 }

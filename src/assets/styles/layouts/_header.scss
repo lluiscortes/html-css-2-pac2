@@ -9,9 +9,10 @@
 
   @include media-breakpoint-up(md) {
     top: 50px;
-    right: 50px;
+    right: 70px;
   }
 }
+
 
 //--------------//
 //--- Toggle ---//
@@ -89,7 +90,7 @@
   margin: 0;
 }
 .navbar__item {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 
   &:last-child {
     margin-bottom: 0;
@@ -103,6 +104,12 @@
   text-align: center;
   font-weight: $font-weight-bold;
   font-size: 1.5rem;
+  transition: $transition-base;
+
+  &:hover {
+    color: $white;
+    transform: translateX(10px);
+  }
 }
 
 
@@ -115,13 +122,12 @@
   align-items: center;
 }
 .header__logo {
-  width: 70px;
+  width: 60px;
   height: auto;
   margin-right: 1.5rem;
   border: 3px solid $primary;
 
   @include media-breakpoint-up(md) {
-    width: 80px;
     margin-right: 2rem;
   }
 }

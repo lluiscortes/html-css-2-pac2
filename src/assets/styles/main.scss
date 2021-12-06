@@ -25,6 +25,10 @@
 // AOS
 @import 'node_modules/aos/src/sass/aos';
 
+/**
+ * Functions
+ */
+@import 'functions';
 
 /**
  * Import layouts
@@ -32,12 +36,18 @@
  */
 
 @import 'layouts/general';
-//@import 'layouts/home';
+@import 'layouts/home';
 @import 'layouts/company';
 @import 'layouts/page-header';
 @import 'layouts/footer';
 @import 'layouts/gallery';
 @import 'layouts/header';
+@import 'layouts/blog';
+
+/**
+ * Plugins
+ */
+@import 'plugins/headroom';
 
 
 /**
